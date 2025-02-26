@@ -18,19 +18,24 @@
 # <a class=md-button href="example-2-two-qubit-adiabatic.py" download> Download Script </a>
 # <a class=md-button href="../../assets/data/two-qubit-adiabatic-job.json" download> Download Job </a>
 #
-# <div class="admonition warning"> 
+# <div class="admonition warning">
 # <p class="admonition-title">Job Files for Complete Examples</p>
 # <p>
 # To be able to run the complete examples without having to submit your program to hardware and wait, you'll
-# need to download the associated job files. These files contain the results of running the program on 
-# the quantum hardware. 
+# need to download the associated job files. These files contain the results of running the program on
+# the quantum hardware.
 #
 # You can download the job files by clicking the "Download Job" button above. You'll then need to place
-# the job file in the `data` directory that was created for you when you ran the `import` part of the script 
+# the job file in the `data` directory that was created for you when you ran the `import` part of the script
 # (alternatively you can make the directory yourself, it should live at the same level as wherever you put this script).
-# </p> 
+# </p>
 # </div>
 #
+
+import os
+
+import numpy as np
+import matplotlib.pyplot as plt
 
 # %% [markdown]
 # # Two Qubit Adiabatic Sweep
@@ -40,12 +45,7 @@
 # us to explore the effect of the Rydberg interaction. We will run the program on both
 # the emulator and the hardware to compare the results.
 # %%
-from bloqade.analog import start, cast, var, save, load
-import numpy as np
-
-import matplotlib.pyplot as plt
-
-import os
+from bloqade.analog import var, cast, load, save, start
 
 if not os.path.isdir("data"):
     os.mkdir("data")
@@ -114,14 +114,14 @@ if not os.path.isfile(emu_filename):
 # We can then save the results to a file.
 
 #
-# <div class="admonition danger"> 
+# <div class="admonition danger">
 # <p class="admonition-title">Hardware Execution Cost</p>
 # <p>
 #
-# For this particular program, 7 tasks are generated with each task having 100 shots, amounting to 
+# For this particular program, 7 tasks are generated with each task having 100 shots, amounting to
 #  __USD \\$9.10__ on AWS Braket.
-# 
-# </p> 
+#
+# </p>
 # </div>
 
 # %%

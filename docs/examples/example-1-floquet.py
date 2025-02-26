@@ -18,17 +18,17 @@
 # <a class=md-button href="example-1-floquet.py" download> Download Script </a>
 # <a class=md-button href="../../assets/data/floquet-job.json" download> Download Job </a>
 #
-# <div class="admonition warning"> 
+# <div class="admonition warning">
 # <p class="admonition-title">Job Files for Complete Examples</p>
 # <p>
 # To be able to run the complete examples without having to submit your program to hardware and wait, you'll
-# need to download the associated job files. These files contain the results of running the program on 
-# the quantum hardware. 
+# need to download the associated job files. These files contain the results of running the program on
+# the quantum hardware.
 #
 # You can download the job files by clicking the "Download _ Job" button above. You'll then need to place
-# the job file in the `data` directory that was created for you when you ran the `import` part of the script 
+# the job file in the `data` directory that was created for you when you ran the `import` part of the script
 # (alternatively you can make the directory yourself, it should live at the same level as wherever you put this script).
-# </p> 
+# </p>
 # </div>
 #
 
@@ -41,11 +41,13 @@
 # the hardware, which only supports piecewise linear/constant functions. First let us
 # start with the imports.
 
-# %%
-from bloqade.analog import start, cast, save, load
 import os
+
 import numpy as np
 import matplotlib.pyplot as plt
+
+# %%
+from bloqade.analog import cast, load, save, start
 
 if not os.path.isdir("data"):
     os.mkdir("data")
@@ -108,14 +110,14 @@ floquet_job = floquet_program.assign(
 # copies of the program in parallel. For more information about this process, see the
 # first tutorial.
 #
-# <div class="admonition danger"> 
+# <div class="admonition danger">
 # <p class="admonition-title">Hardware Execution Cost</p>
 # <p>
 #
-# For this particular program, 101 tasks are generated with each task having 50 shots, amounting to 
+# For this particular program, 101 tasks are generated with each task having 50 shots, amounting to
 #  __USD \\$80.80__ on AWS Braket.
-# 
-# </p> 
+#
+# </p>
 # </div>
 
 # %%

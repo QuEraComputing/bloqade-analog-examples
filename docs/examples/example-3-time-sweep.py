@@ -18,17 +18,17 @@
 # <a class=md-button href="example-3-time-sweep.py" download> Download Script </a>
 # <a class=md-button href="../../assets/data/time-sweep-job.json" download> Download Job </a>
 #
-# <div class="admonition warning"> 
+# <div class="admonition warning">
 # <p class="admonition-title">Job Files for Complete Examples</p>
 # <p>
 # To be able to run the complete examples without having to submit your program to hardware and wait, you'll
-# need to download the associated job files. These files contain the results of running the program on 
-# the quantum hardware. 
+# need to download the associated job files. These files contain the results of running the program on
+# the quantum hardware.
 #
 # You can download the job files by clicking the "Download Job" button above. You'll then need to place
-# the job file in the `data` directory that was created for you when you ran the `import` part of the script 
+# the job file in the `data` directory that was created for you when you ran the `import` part of the script
 # (alternatively you can make the directory yourself, it should live at the same level as wherever you put this script).
-# </p> 
+# </p>
 # </div>
 #
 
@@ -42,18 +42,20 @@
 # %% [markdown]
 # Let's import all the tools we'll need.
 
-# %%
-from bloqade.analog import save, load
-from bloqade.analog.atom_arrangement import Chain
-import numpy as np
 import os
+
+import numpy as np
 import matplotlib.pyplot as plt
+
+# %%
+from bloqade.analog import load, save
+from bloqade.analog.atom_arrangement import Chain
 
 if not os.path.isdir("data"):
     os.mkdir("data")
 
 # %% [markdown]
-# ## Program Definition 
+# ## Program Definition
 # We define a program where our geometry is a chain of 11 atoms
 # with a distance of 6.1 micrometers between atoms.
 
@@ -69,8 +71,8 @@ min_time_step = 0.05
 
 # %% [markdown]
 # We choose a maximum Rabi amplitude of 15.8 MHz.
-# Pushing the Rabi amplitude as high as we can minimizes the protocol duration, 
-# but maintains the same pulse area, $\Omega t$. For this reason, in many cases, 
+# Pushing the Rabi amplitude as high as we can minimizes the protocol duration,
+# but maintains the same pulse area, $\Omega t$. For this reason, in many cases,
 # maximizing the Rabi frequency is considered good practice for minimizing decoherence effects.
 
 # %%
@@ -79,14 +81,14 @@ rabi_amplitude_values = [0.0, 15.8, 15.8, 0.0]
 # %% [markdown]
 # The lattice spacing and Rabi amplitudes give us a nearest neighbor interaction strength:
 # $$V_{{i},{i+1}} = \frac{C_6}{a^6} \approx 105.21 \, \text{MHz} \gg \Omega = 15.8 \, \text{MHz}$$
-# where $C_6 = 2\pi \times 862690 \, \text{MHz} \, \mu \text{m}^6$ is our van der Waals coefficient 
+# where $C_6 = 2\pi \times 862690 \, \text{MHz} \, \mu \text{m}^6$ is our van der Waals coefficient
 # for Aquila hardware and $a$ is the lattice spacing we defined earlier.
 # Our interaction strength for next-nearest neighbors is quite low comparatively:
 # $$V_{{i},{i+2}} = \frac{C_6}{(2a)^6} \approx 1.64 \, \text{MHz} \ll \Omega = 15.8 \, \text{MHz}$$
 # The Rydberg interaction term dominates for nearest neighbor spacing, while the Rabi coupling dominates
 # for next-nearest neighbors.
 # This increases the probability of realizing a Rydberg blockade for nearest neighbors,
-# but decreases the probability of Rydberg interaction between next-nearest neighbors. 
+# but decreases the probability of Rydberg interaction between next-nearest neighbors.
 # So far, we're in a good position for creating a Z2 phase.
 
 # Next, we define our detuning values.
@@ -96,10 +98,10 @@ rabi_detuning_values = [-16.33, -16.33, 16.33, 16.33]
 
 # %% [markdown]
 # We start at large negative detuning values where all atoms are in the ground state.
-# Then, we transition to large positive detuning values where the Rydberg state 
+# Then, we transition to large positive detuning values where the Rydberg state
 # becomes energetically favorable and inter-atomic interactions become more important.
 
-# The maximum absolute detuning value of $16.33 \, \text{MHz}$ gives us a Rydberg blockade radius 
+# The maximum absolute detuning value of $16.33 \, \text{MHz}$ gives us a Rydberg blockade radius
 # $$R_b = \Bigl(\frac{C_6}{\sqrt{\Delta^2+\Omega^2}}\Bigr)^{1/6} \approx 7.88 \mu \text{m}$$
 # Typically, we define the lattice spacing such that $a < R_b < 2a$ for a good blockade approximation
 # and Z2 state probability.
@@ -143,14 +145,14 @@ time_sweep_z2_job = time_sweep_z2_prog.batch_assign(
 # later and results fetched when they are available.
 
 #
-# <div class="admonition danger"> 
+# <div class="admonition danger">
 # <p class="admonition-title">Hardware Execution Cost</p>
 # <p>
 #
-# For this particular program, 20 tasks are generated with each task having 100 shots, amounting to 
+# For this particular program, 20 tasks are generated with each task having 100 shots, amounting to
 #  __USD \\$26.00__ on AWS Braket.
-# 
-# </p> 
+#
+# </p>
 # </div>
 
 # %%
@@ -165,10 +167,11 @@ if not os.path.isfile(filename):
     save(future, filename)
 
 # %% [markdown]
-# ## Plotting the Results 
+# ## Plotting the Results
 # To make our lives easier we define a trivial function to
 # extract the probability of the Z2 phase from each of the tasks generated from the
 # parameter sweep. The counts are obtained from the `report`of the batch object.
+
 
 # %%
 def get_z2_probabilities(report):
@@ -226,7 +229,7 @@ plt.show()
 # %%
 densities = emu_report.rydberg_densities()
 site_indices = densities.loc[0].index.values
-rydberg_densities_67_sweep = densities.loc[5,0:10].values
+rydberg_densities_67_sweep = densities.loc[5, 0:10].values
 
 plt.bar(site_indices, rydberg_densities_67_sweep, color="#C8447C")
 plt.xticks(site_indices)
@@ -246,7 +249,9 @@ rydberg_densities = densities.values.transpose()
 
 im = plt.imshow(rydberg_densities)
 plt.xticks(rotation=90)
-plt.xticks([x for x in range(len(emu_sweep_times))], [round(dur,2) for dur in emu_sweep_times])
+plt.xticks(
+    [x for x in range(len(emu_sweep_times))], [round(dur, 2) for dur in emu_sweep_times]
+)
 plt.yticks(site_indices)
 plt.xlabel("Sweep Time ($\mu$s)")
 plt.ylabel("Atom Site Index")
