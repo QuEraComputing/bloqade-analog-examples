@@ -32,11 +32,6 @@
 # </div>
 #
 
-import os
-
-import numpy as np
-import matplotlib.pyplot as plt
-
 # %% [markdown]
 # # Two Qubit Adiabatic Sweep
 # ## Introduction
@@ -45,6 +40,10 @@ import matplotlib.pyplot as plt
 # us to explore the effect of the Rydberg interaction. We will run the program on both
 # the emulator and the hardware to compare the results.
 # %%
+import os
+
+import numpy as np
+import matplotlib.pyplot as plt
 from bloqade.analog import var, cast, load, save, start
 
 if not os.path.isdir("data"):

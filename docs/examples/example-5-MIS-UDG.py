@@ -54,13 +54,11 @@
 # numpy random number generator is used. Using the random number generator allows you
 # to set the seed for reproducibility. After that, defining the pulse sequence is the
 # same as in the previous tutorials.
-
+# %%
 import os
 
 import numpy as np
 import matplotlib.pyplot as plt
-
-# %%
 from bloqade.analog import load, save
 from bloqade.analog.atom_arrangement import Square
 

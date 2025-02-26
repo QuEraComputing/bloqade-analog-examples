@@ -40,13 +40,11 @@
 # Bloqade API to sample the function at certain intervals to make it compatible with
 # the hardware, which only supports piecewise linear/constant functions. First let us
 # start with the imports.
-
+# %%
 import os
 
 import numpy as np
 import matplotlib.pyplot as plt
-
-# %%
 from bloqade.analog import cast, load, save, start
 
 if not os.path.isdir("data"):
