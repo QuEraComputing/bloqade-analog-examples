@@ -40,7 +40,7 @@
 # us to explore the effect of the Rydberg interaction. We will run the program on both
 # the emulator and the hardware to compare the results.
 # %%
-from bloqade import start, cast, var, save, load
+from bloqade.analog import start, cast, var, save, load
 import numpy as np
 
 import matplotlib.pyplot as plt

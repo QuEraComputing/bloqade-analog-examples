@@ -60,8 +60,8 @@
 
 # %%
 
-from bloqade import var, save, load
-from bloqade.atom_arrangement import Chain
+from bloqade.analog import var, save, load
+from bloqade.analog.atom_arrangement import Chain
 import matplotlib.pyplot as plt
 import numpy as np
 import os

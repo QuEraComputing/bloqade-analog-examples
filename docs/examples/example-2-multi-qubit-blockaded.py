@@ -42,8 +42,8 @@
 # by adding more atoms to the cluster.
 
 # %%
-from bloqade import start, save, load
-from bloqade.atom_arrangement import Chain, Square
+from bloqade.analog import start, save, load
+from bloqade.analog.atom_arrangement import Chain, Square
 import numpy as np
 import matplotlib.pyplot as plt
 

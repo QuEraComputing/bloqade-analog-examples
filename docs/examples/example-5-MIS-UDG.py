@@ -56,8 +56,8 @@
 # same as in the previous tutorials.
 
 # %%
-from bloqade import load, save
-from bloqade.atom_arrangement import Square
+from bloqade.analog import load, save
+from bloqade.analog.atom_arrangement import Square
 import numpy as np
 import os
 import matplotlib.pyplot as plt

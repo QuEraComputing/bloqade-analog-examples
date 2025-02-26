@@ -47,8 +47,8 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
-from bloqade import save, load, cast, piecewise_linear
-from bloqade.ir.location import Chain
+from bloqade.analog import save, load, cast, piecewise_linear
+from bloqade.analog.ir.location import Chain
 
 if not os.path.isdir("data"):
     os.mkdir("data")

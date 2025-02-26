@@ -44,7 +44,7 @@
 
 
 # %%
-from bloqade import start, cast, save, load
+from bloqade.analog import start, cast, save, load
 from decimal import Decimal
 import os
 import numpy as np

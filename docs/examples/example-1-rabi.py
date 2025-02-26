@@ -41,7 +41,7 @@
 # Rabi frequency.
 
 # %%
-from bloqade import start, cast, load, save
+from bloqade.analog import start, cast, load, save
 import os
 import matplotlib.pyplot as plt
 import numpy as np
@@ -158,7 +158,7 @@ if not os.path.isfile(hardware_filename):
 # obtained from the `run_time` parameter of the `Report` object as a list.
 #
 # before that we need to load the results from our previously saved files using
-# the `load` function from Bloqade:
+# the `load` function from bloqade.analog:
 
 # %%
 emu_batch = load(emu_filename)

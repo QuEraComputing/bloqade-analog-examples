@@ -46,8 +46,8 @@
 # a new plot with matplotlib.
 
 # %%
-from bloqade.atom_arrangement import Square
-from bloqade import save, load
+from bloqade.analog.atom_arrangement import Square
+from bloqade.analog import save, load
 from bokeh.io import output_notebook
 
 import os

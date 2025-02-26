@@ -43,8 +43,8 @@
 # Let's import all the tools we'll need.
 
 # %%
-from bloqade import save, load
-from bloqade.atom_arrangement import Chain
+from bloqade.analog import save, load
+from bloqade.analog.atom_arrangement import Chain
 import numpy as np
 import os
 import matplotlib.pyplot as plt

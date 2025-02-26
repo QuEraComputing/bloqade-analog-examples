@@ -42,7 +42,7 @@
 # start with the imports.
 
 # %%
-from bloqade import start, cast, save, load
+from bloqade.analog import start, cast, save, load
 import os
 import numpy as np
 import matplotlib.pyplot as plt
@@ -141,7 +141,9 @@ if not os.path.isfile(hardware_filename):
 
 # %%
 emu_batch = load(emu_filename)
+assert not isinstance(emu_batch, dict)
 hardware_batch = load(hardware_filename)
+assert not isinstance(hardware_batch, dict)
 # hardware_batch.fetch()
 # save(filename, hardware_batch)
 
