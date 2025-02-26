@@ -39,13 +39,12 @@
 # constant detuning and Rabi frequency. In practice, the Rabi frequency has to start
 # and end at 0.0, so we will use a piecewise linear function to ramp up and down the
 # Rabi frequency.
-
+# %%
 import os
 
 import numpy as np
 import matplotlib.pyplot as plt
 
-# %%
 from bloqade.analog import cast, load, save, start
 
 if not os.path.isdir("data"):

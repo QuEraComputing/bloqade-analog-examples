@@ -42,7 +42,7 @@
 # 0.0, so we will use a piecewise linear function to ramp up and down the Rabi
 # frequency.
 
-
+# %%
 import os
 from decimal import Decimal
 

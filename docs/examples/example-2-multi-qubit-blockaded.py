@@ -40,7 +40,7 @@
 # detail in the [whitepaper](https://arxiv.org/abs/2306.11727). But in short, we can
 # use the Rydberg blockade to change the effective Rabi frequency of the entire system
 # by adding more atoms to the cluster.
-
+# %%
 import os
 
 import numpy as np

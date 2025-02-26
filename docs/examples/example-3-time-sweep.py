@@ -42,12 +42,11 @@
 # %% [markdown]
 # Let's import all the tools we'll need.
 
+# %%
 import os
 
 import numpy as np
 import matplotlib.pyplot as plt
-
-# %%
 from bloqade.analog import load, save
 from bloqade.analog.atom_arrangement import Chain
 

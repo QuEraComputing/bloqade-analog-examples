@@ -40,13 +40,11 @@
 # Bloqade API to sample the function at certain intervals to make it compatible with
 # the hardware, which only supports piecewise linear/constant functions. First let us
 # start with the imports.
-
+# %%
 import os
 
 import numpy as np
 import matplotlib.pyplot as plt
-
-# %%
 from bloqade.analog import cast, load, save, start
 
 if not os.path.isdir("data"):
@@ -122,6 +120,7 @@ floquet_job = floquet_program.assign(
 
 # %%
 emu_filename = os.path.join(os.path.abspath(""), "data", "floquet-emulation.json")
+print(emu_filename)
 
 if not os.path.isfile(emu_filename):
     emu_batch = floquet_job.bloqade.python().run(10000)
