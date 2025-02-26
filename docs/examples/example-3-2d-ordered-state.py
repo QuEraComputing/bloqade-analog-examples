@@ -44,14 +44,12 @@
 # we're taking advantage of bloqade Python's built-in
 # visualization capabilities instead of crafting
 # a new plot with matplotlib.
-
 # %%
-from bloqade.analog.atom_arrangement import Square
-
 import os
 
 from bokeh.io import output_notebook
 from bloqade.analog import load, save
+from bloqade.analog.atom_arrangement import Square
 
 if not os.path.isdir("data"):
     os.mkdir("data")
