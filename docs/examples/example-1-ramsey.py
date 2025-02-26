@@ -48,8 +48,6 @@ from decimal import Decimal
 
 import numpy as np
 import matplotlib.pyplot as plt
-
-# %%
 from bloqade.analog import cast, load, save, start
 
 if not os.path.isdir("data"):

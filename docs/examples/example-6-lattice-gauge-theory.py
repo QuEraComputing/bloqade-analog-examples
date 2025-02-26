@@ -38,10 +38,8 @@
 # In the realm of gauge theories, it has been discovered that the Z2 ground state and the quantum scar of the Rydberg chain correspond to the 'string' state and the string-inversion mechanism of the studied LGT, respectively.
 # More intriguingly, by selectively addressing certain atoms, we can induce defects in the chain and simulate the propagation of particle-antiparticle pairs.
 # This notebook is inspired by the paper by F. M. Surace et al. (DOI: 10.1103/PhysRevX.10.021041).
-
 # %% [markdown]
 # ## Define the Program
-
 # %%
 import os
 

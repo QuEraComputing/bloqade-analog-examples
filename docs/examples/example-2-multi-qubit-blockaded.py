@@ -45,8 +45,6 @@ import os
 
 import numpy as np
 import matplotlib.pyplot as plt
-
-# %%
 from bloqade.analog import load, save, start
 from bloqade.analog.atom_arrangement import Chain, Square
 
