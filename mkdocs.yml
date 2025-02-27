@@ -3,13 +3,13 @@ site_url: https://bloqade.quera.com
 site_description: >-
   The neutral atom computing software development kit.
 
-repo_name: bloqade-python
-repo_url: https://github.com/QuEraComputing/bloqade-python
+repo_name: bloqade-analog
+repo_url: https://github.com/QuEraComputing/bloqade-analog
 
 # Page tree
 nav:
-  - Home: 'https://queracomputing.github.io/bloqade-python/latest/'
-  - Tutorials: 
+  - Home: 'https://queracomputing.github.io/bloqade-analog/latest/'
+  - Tutorials:
     - index.md
     - Tutorial 1: examples/example-1-rabi.py
     - Tutorial 2: examples/example-1-ramsey.py
@@ -23,11 +23,11 @@ nav:
     - Tutorial 10: examples/example-5-MIS-UDG.py
     - Tutorial 11: examples/example-6-lattice-gauge-theory.py
   - Reference: 'https://bloqade.quera.com/latest/reference/overview/'
-  - Blog: 'https://queracomputing.github.io/bloqade-python/latest/blog/2023/'
-  - License: 'https://github.com/QuEraComputing/bloqade-python/blob/main/LICENSE'
-  - Contributing: 'https://queracomputing.github.io/bloqade-python/latest/contributing/'
+  - Blog: 'https://queracomputing.github.io/bloqade-analog/latest/blog/2023/'
+  - License: 'https://github.com/QuEraComputing/bloqade-analog/blob/main/LICENSE'
+  - Contributing: 'https://queracomputing.github.io/bloqade-analog/latest/contributing/'
 
-  
+
 
 copyright: Copyright &copy; 2023 - QuEra Computing Inc.
 theme:
@@ -114,7 +114,7 @@ plugins:
 
 
 extra:
-  homepage: https://queracomputing.github.io/bloqade-python/latest/
+  homepage: https://queracomputing.github.io/bloqade-analog/latest/
   version:
     provider: mike
   annotate:
@@ -124,7 +124,7 @@ extra:
     property: G-SF6JCCYR56
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/QuEraComputing/bloqade-python
+      link: https://github.com/QuEraComputing/bloqade-analog
     - icon: fontawesome/brands/python
       link: https://pypi.org/project/bloqade/
     # TODO: make a mastodon account!

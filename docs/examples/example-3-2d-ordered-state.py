@@ -18,17 +18,17 @@
 # <a class=md-button href="example-3-2d-ordered-state.py" download> Download Script </a>
 # <a class=md-button href="../../assets/data/striated-phase-hardware.json" download> Download Job </a>
 #
-# <div class="admonition warning"> 
+# <div class="admonition warning">
 # <p class="admonition-title">Job Files for Complete Examples</p>
 # <p>
 # To be able to run the complete examples without having to submit your program to hardware and wait, you'll
-# need to download the associated job files. These files contain the results of running the program on 
-# the quantum hardware. 
+# need to download the associated job files. These files contain the results of running the program on
+# the quantum hardware.
 #
 # You can download the job files by clicking the "Download Job" button above. You'll then need to place
-# the job file in the `data` directory that was created for you when you ran the `import` part of the script 
+# the job file in the `data` directory that was created for you when you ran the `import` part of the script
 # (alternatively you can make the directory yourself, it should live at the same level as wherever you put this script).
-# </p> 
+# </p>
 # </div>
 #
 
@@ -44,13 +44,12 @@
 # we're taking advantage of bloqade Python's built-in
 # visualization capabilities instead of crafting
 # a new plot with matplotlib.
-
 # %%
-from bloqade.atom_arrangement import Square
-from bloqade import save, load
-from bokeh.io import output_notebook
-
 import os
+
+from bokeh.io import output_notebook
+from bloqade.analog import load, save
+from bloqade.analog.atom_arrangement import Square
 
 if not os.path.isdir("data"):
     os.mkdir("data")
@@ -92,14 +91,14 @@ batch = prog.assign(delta_end=42.66, sweep_time=2.4)
 # data per shot when submitting to Hardware.
 
 #
-# <div class="admonition danger"> 
+# <div class="admonition danger">
 # <p class="admonition-title">Hardware Execution Cost</p>
 # <p>
 #
-# For this particular program, 1 task is generated with 100 shots, amounting to 
+# For this particular program, 1 task is generated with 100 shots, amounting to
 #  __USD \\$1.30__ on AWS Braket.
-# 
-# </p> 
+#
+# </p>
 # </div>
 
 # %%

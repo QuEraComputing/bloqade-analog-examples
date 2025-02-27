@@ -18,16 +18,16 @@
 # <a class=md-button href="example-1-rabi.py" download> Download Script </a>
 # <a class=md-button href="../../assets/data/rabi-job.json" download> Download Job </a>
 #
-# <div class="admonition warning"> 
+# <div class="admonition warning">
 # <p class="admonition-title">Job Files for Complete Examples</p>
 # <p>
 # To be able to run the complete examples without having to submit your program to hardware and wait, you'll
-# need to download the associated job files. These files contain the results of running the program on 
-# the quantum hardware. 
+# need to download the associated job files. These files contain the results of running the program on
+# the quantum hardware.
 #
 # You can download the job files by clicking the "Download Job" button above. You'll then need to place
 # the job file in the `data` directory that was created for you when you ran the `import` part of the script (alternatively you can make the directory yourself, it should live at the same level as wherever you put this script).
-# </p> 
+# </p>
 # </div>
 #
 
@@ -39,12 +39,12 @@
 # constant detuning and Rabi frequency. In practice, the Rabi frequency has to start
 # and end at 0.0, so we will use a piecewise linear function to ramp up and down the
 # Rabi frequency.
-
 # %%
-from bloqade import start, cast, load, save
 import os
-import matplotlib.pyplot as plt
+
 import numpy as np
+import matplotlib.pyplot as plt
+from bloqade.analog import cast, load, save, start
 
 if not os.path.isdir("data"):
     os.mkdir("data")
@@ -127,14 +127,14 @@ if not os.path.isfile(emu_filename):
 # method instead of `run_async`. This will block the script until all results in the
 # batch are complete.
 
-# <div class="admonition danger"> 
+# <div class="admonition danger">
 # <p class="admonition-title">Hardware Execution Cost</p>
 # <p>
 #
-# For this particular program, 101 tasks are generated with each task having 1000 shots, amounting to 
+# For this particular program, 101 tasks are generated with each task having 1000 shots, amounting to
 #  __USD \\$1040.30__ on AWS Braket.
-# 
-# </p> 
+#
+# </p>
 # </div>
 
 # %%
@@ -158,7 +158,7 @@ if not os.path.isfile(hardware_filename):
 # obtained from the `run_time` parameter of the `Report` object as a list.
 #
 # before that we need to load the results from our previously saved files using
-# the `load` function from Bloqade:
+# the `load` function from bloqade.analog:
 
 # %%
 emu_batch = load(emu_filename)
