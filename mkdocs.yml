@@ -9,7 +9,7 @@ repo_url: https://github.com/QuEraComputing/bloqade-analog
 # Page tree
 nav:
   - Home: 'https://queracomputing.github.io/bloqade-analog/latest/'
-  - Tutorials:
+  - Analog Tutorials:
     - index.md
     - Tutorial 1: examples/example-1-rabi.py
     - Tutorial 2: examples/example-1-ramsey.py
@@ -22,10 +22,12 @@ nav:
     - Tutorial 9: examples/example-4-quantum-scar-dynamics.py
     - Tutorial 10: examples/example-5-MIS-UDG.py
     - Tutorial 11: examples/example-6-lattice-gauge-theory.py
-  - Reference: 'https://bloqade.quera.com/latest/reference/overview/'
-  - Blog: 'https://queracomputing.github.io/bloqade-analog/latest/blog/2023/'
-  - License: 'https://github.com/QuEraComputing/bloqade-analog/blob/main/LICENSE'
+  - Digital Tutorials: 'https://queracomputing.github.io/bloqade/latest/digital/'
+  - Bloqade Digital: 'https://queracomputing.github.io/bloqade/latest/'
+  - Blog: 'https://queracomputing.github.io/bloqade/latest/blog/'
+  - Analog Reference: 'https://bloqade.quera.com/latest/reference/overview/'
   - Contributing: 'https://queracomputing.github.io/bloqade-analog/latest/contributing/'
+  - QuEra Computing: 'https://quera.com'
 
 
 
