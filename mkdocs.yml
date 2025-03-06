@@ -1,14 +1,15 @@
 site_name: The Neutral Atom SDK
-site_url: https://bloqade.quera.com
+site_url: https://github.com/QuEraComputing/bloqade-analog-examples/dev/
 site_description: >-
   The neutral atom computing software development kit.
 
 repo_name: bloqade-analog
-repo_url: https://github.com/QuEraComputing/bloqade-analog
+repo_url: https://github.com/QuEraComputing/bloqade-analog-examples
+edit_uri: blob/main/docs/
 
 # Page tree
 nav:
-  - Home: 'https://queracomputing.github.io/bloqade-analog/latest/'
+  - Home: 'https://queracomputing.github.io/bloqade/latest/'
   - Analog Tutorials:
     - index.md
     - Tutorial 1: examples/example-1-rabi.py
@@ -25,7 +26,7 @@ nav:
   - Digital Tutorials: 'https://queracomputing.github.io/bloqade/latest/digital/'
   - Bloqade Digital: 'https://queracomputing.github.io/bloqade/latest/'
   - Blog: 'https://queracomputing.github.io/bloqade/latest/blog/'
-  - Analog Reference: 'https://bloqade.quera.com/latest/reference/overview/'
+  - Analog Reference: 'https://queracomputing.github.io/bloqade-analog/latest/reference/overview/'
   - Contributing: 'https://queracomputing.github.io/bloqade-analog/latest/contributing/'
   - QuEra Computing: 'https://quera.com'
 
