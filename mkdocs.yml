@@ -10,6 +10,7 @@ edit_uri: blob/main/docs/
 # Page tree
 nav:
   - Home: 'https://queracomputing.github.io/bloqade/latest/'
+  - Digital Tutorials: 'https://queracomputing.github.io/bloqade/latest/digital/'
   - Analog Tutorials:
     - index.md
     - Tutorial 1: examples/example-1-rabi.py
@@ -23,10 +24,11 @@ nav:
     - Tutorial 9: examples/example-4-quantum-scar-dynamics.py
     - Tutorial 10: examples/example-5-MIS-UDG.py
     - Tutorial 11: examples/example-6-lattice-gauge-theory.py
-  - Digital Tutorials: 'https://queracomputing.github.io/bloqade/latest/digital/'
+  - qBook: 'https://qbook.quera.com/'
+  - Bloqade Analog: 'https://queracomputing.github.io/bloqade-analog/latest/'
+  - Analog Reference: 'https://queracomputing.github.io/bloqade-analog/latest/reference/overview/'
   - Bloqade Digital: 'https://queracomputing.github.io/bloqade/latest/'
   - Blog: 'https://queracomputing.github.io/bloqade/latest/blog/'
-  - Analog Reference: 'https://queracomputing.github.io/bloqade-analog/latest/reference/overview/'
   - Contributing: 'https://queracomputing.github.io/bloqade-analog/latest/contributing/'
   - QuEra Computing: 'https://quera.com'
 
